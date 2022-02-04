@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenericConnectorDescriptor
-        browsingType ="any"
-        requireConnectionForBrowse="true">
+<GenericConnectorDescriptor browsingType="any" requireConnectionForBrowse="true">
     <description>Couchbase Connector</description>
     <field type="string" id="connectionString" label="Connection String">
         <helpText>Enter either a hostname, IP address, or a comma separated list thereof representing Couchbase cluster endpoints</helpText>
@@ -15,4 +13,23 @@
     <field type="string" id="bucket" label="Bucket">
         <helpText>The Couchbase bucket to connect to</helpText>
     </field>
+
+
+    <operation types="CREATE">
+        <!-- <field type="boolean" id="structureData" label="Structured Data" scope="browseOnly">
+            <helpText>On selection of this check box, a json schema will be created else no json schema is created. In order to create a json schema, please provide the ID.</helpText>
+        </field> -->
+        <field type="boolean" id="includeSizeExceededPayload" label="Include Size Exceeded Payload">
+            <helpText>On selection of this check box, input documents that were filtered based on size will be included in output.</helpText>
+        </field>
+        <!-- <field type="string" id="objectId" label="Id" scope="browseOnly">
+            <helpText>This id is the ObjectId of any record in the MongoDB. Based on the provided id, a json schema will be generated which will be used as request/response profile for a particular operation.</helpText>
+        </field> -->
+        <field type="integer" id="batchSize" label="Batch Size">
+            <helpText>The number of documents to be returned in each batch(default 1)</helpText>
+        </field>
+        <field type="integer" id="maxRetries" label="Max Retries">
+            <helpText>The maximum number of operation retries before the operation is cancelled (default 3)</helpText>
+        </field>
+    </operation>
 </GenericConnectorDescriptor>

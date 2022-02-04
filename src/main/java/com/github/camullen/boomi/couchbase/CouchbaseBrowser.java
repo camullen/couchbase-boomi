@@ -2,7 +2,6 @@ package com.github.camullen.boomi.couchbase;
 
 import com.boomi.connector.api.*;
 import com.boomi.connector.util.BaseBrowser;
-import com.boomi.connector.util.BaseConnection;
 import com.boomi.util.StringUtil;
 
 import java.util.Collection;
