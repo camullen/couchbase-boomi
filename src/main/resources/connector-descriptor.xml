@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenericConnectorDescriptor>
-    <!-- define connection properties and operations here -->
+<GenericConnectorDescriptor
+        browsingType ="any"
+        requireConnectionForBrowse="true">
+    <description>Couchbase Connector</description>
+    <field type="string" id="connectionString" label="Connection String">
+        <helpText>Enter either a hostname, IP address, or a comma separated list thereof representing Couchbase cluster endpoints</helpText>
+    </field>
+    <field type="string" id="username" label="Username">
+        <helpText>Enter the username of the Couchbase user</helpText>
+    </field>
+    <field type="password" id="password" label="Password">
+        <helpText>Enter the password of the user</helpText>
+    </field>
+    <field type="string" id="bucket" label="Bucket">
+        <helpText>The Couchbase bucket to connect to</helpText>
+    </field>
 </GenericConnectorDescriptor>

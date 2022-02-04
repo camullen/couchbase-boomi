@@ -58,6 +58,11 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
             <groupId>com.boomi.connsdk</groupId>
             <artifactId>connector-sdk-util</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.couchbase.client</groupId>
+            <artifactId>java-client</artifactId>
+            <version>3.2.3</version>
+        </dependency>
     </dependencies>
 
     <build>
